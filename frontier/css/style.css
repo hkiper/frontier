@@ -885,6 +885,7 @@ body.ie ._ibg img {
 }
 
 .header-top {
+  z-index: 100;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -982,51 +983,23 @@ body.ie ._ibg img {
   color: #fff;
 }
 
-/*
-//Burger
-.icon-menu {
-	display: none;
-	@media (max-width: $md3+px) {
-		display: block;
-		position: absolute;
-		top: 18px;
-		right: 10px;
-		width: 30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span {
-			transition: all 0.3s ease 0s;
-			top: calc(50% - 1px);
-			left: 0px;
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			background-color: #000;
-			&:first-child {
-				top: 0px;
-			}
-			&:last-child {
-				top: auto;
-				bottom: 0px;
-			}
-		}
-		&._active {
-			span {
-				transform: scale(0);
-				&:first-child {
-					transform: rotate(-45deg);
-					top: calc(50% - 1px);
-				}
-				&:last-child {
-					transform: rotate(45deg);
-					bottom: calc(50% - 1px);
-				}
-			}
-		}
-	}
+.menu__body._active {
+  -webkit-transform: translate(0px, 90px);
+      -ms-transform: translate(0px, 90px);
+          transform: translate(0px, 90px);
 }
-*/
+
+.icon-menu {
+  display: none;
+}
+
+.menu__icon {
+  background-color: #029c8d;
+  border: 13px solid #029c8d;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  border-radius: 10px;
+}
 
 .page {
   -webkit-box-flex: 1;
@@ -1071,7 +1044,7 @@ body.ie ._ibg img {
     width: 380px;
   }
 
-  .header-bottom__link:last-child {
+  .link-hidden {
     display: none;
   }
 }
@@ -1093,6 +1066,7 @@ body.ie ._ibg img {
     font-size: 16px;
     line-height: 18px;
     width: 160px;
+    margin: 0px 30px 0px 0px;
   }
 
   .header-top__phone-one span {
@@ -1104,7 +1078,8 @@ body.ie ._ibg img {
   .header-top__phone-two {
     font-size: 16px;
     line-height: 18px;
-    width: 160px;
+    width: 250px;
+    margin-left: 10px;
   }
 
   .header-top__phone-two span {
@@ -1114,7 +1089,93 @@ body.ie ._ibg img {
   }
 
   .header-bottom__wrapp {
-    display: none;
+    background-color: #fff;
+  }
+
+  .header-bottom__links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .header-bottom__link {
+    font-size: 22px;
+    line-height: 40px;
+  }
+
+  .menu__body {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    -webkit-transform: translate(-100%, 90px);
+        -ms-transform: translate(-100%, 90px);
+            transform: translate(-100%, 90px);
+    background-color: #00887A;
+    padding: 20px 0px 30px 0px;
+    -webkit-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+    overflow: auto;
+  }
+
+  .link-hidden {
+    display: block;
+  }
+
+  .icon-menu {
+    display: block;
+    position: absolute;
+    top: 22px;
+    right: 30px;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 15;
+  }
+
+  .icon-menu span {
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+    top: calc(50% - 1px);
+    left: 0px;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+
+  .icon-menu span:first-child {
+    top: 0px;
+  }
+
+  .icon-menu span:last-child {
+    top: auto;
+    bottom: 0px;
+  }
+
+  .icon-menu._active span {
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+  }
+
+  .icon-menu._active span:first-child {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: calc(50% - 1px);
+  }
+
+  .icon-menu._active span:last-child {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    bottom: calc(50% - 1px);
   }
 }
 
@@ -1122,5 +1183,19 @@ body.ie ._ibg img {
   ._container {
     max-width: none;
     padding: 0 10px;
+  }
+
+  .header-top .header-top__logo-text {
+    font-size: 25px;
+  }
+
+  .header-top__phone-one {
+    display: none;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .header-top__phone-two {
+    display: none;
   }
 }
