@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="ru">
-	@@include('_head.html',{
-	"title":"Рубеж"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('_header.html',{})
-			<main class="page">
+@@include('_head.html',{
+"title":"Рубеж"
+})
 
-			</main>
-			@@include('_footer.html',{})
-		</div>
-		@@include('_popup.html',{})
-		@@include('_js.html',{})
-	</body>
+<body>
+	<div class="wrapper">
+		@@include('_header.html',{})
+		<main class="page">
+			<div class="page__feedback-form">
+				<div class="feedback-form _container">
+					<div class="feedback-form__img">
+					</div>
+					<div class="feedback-form__form">
+						<div class="feedback-form__top">
+							<h1 class="feedback-form__title">Слаботочные системы</h1>
+							<div class="feedback-form__text">быстрый монтаж и качественное обслуживание</div>
+						</div>
+						<div class="feedback-form__bottom">
+							<div class="feedback-form__item">
+								<div class="feedback-form__item-text">Бесплатный выезд!</div>
+								<div class="feedback-form__item-text">Бесплатная консультация!</div>
+							</div>
+							<div class="feedback-form__callback">
+								<form action="">
+									<span class="feedback-form__tell"><input type="tel" class="feedback-form__tell1" name="utel"
+											value size="10" placeholder="Ваш телефон"></span>
+									<span class="feedback-form__btn"><button type="submit" class="feedback-form__btn1">Узнать
+											стоимость</button></span>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page__info" style="background-color: aqua; height: 300px;">
+
+			</div>
+		</main>
+		@@include('_footer.html',{})
+	</div>
+	@@include('_popup.html',{})
+	@@include('_js.html',{})
+</body>
+
 </html>

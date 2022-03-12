@@ -31,7 +31,10 @@ $md3: 767.98;
 $md4: 479.98;
 
 $mainColor: #00887A;
+$mainColor2: #fff; 
 $fontColor: #fff;
+$fontColor2: black;
+
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
@@ -101,3 +104,174 @@ body {
 //===================================================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
+.page {
+	&__feedback-form {
+		background-color: $mainColor;
+		color: $fontColor2;
+		
+	}
+}
+.feedback-form {
+	display: flex;
+	justify-content: space-between;
+	padding: 0px 20px;
+	@media (max-width: $md1+px) {
+		justify-content: center;
+	}
+
+	&::before{
+		content: "";
+		width: 659px;
+		height: 515px;
+		background-image: url(../img/form/head1.png);
+		background-size: contain;
+	   background-repeat: no-repeat;
+		position: relative;
+		top: 10px;
+		left: 32px;
+		z-index: 5;
+		@media (max-width: $md1+px) {
+			display: none;
+		}
+	}
+	// .feedback-form__img
+
+	&__img {
+		
+		/* position: absolute;
+		top: 0;
+		left: 0; */
+	}
+
+	// .feedback-form__form
+
+	&__form {
+		width: 600px;
+		border-radius: 40px;
+		background-color: $mainColor2;
+		margin: 80px 0px 110px 0px;
+		
+	}
+
+	// .feedback-form__top
+
+	&__top {
+		margin: auto;
+		max-width: 440px;
+	}
+
+	// .feedback-form__title
+
+	&__title {
+		text-align: center;
+		font-size: 40px;
+		font-weight: 600;
+		margin: 40px 0px 20px 0px;	
+	}
+
+	// .feedback-form__text
+
+	&__text {
+		text-align: center;
+		font-size: 18px;
+		margin-bottom: 30px;
+	}
+
+	// .feedback-form__bottom
+
+	&__bottom {
+		background: #ccdad8;
+		padding: 40px 0px;
+		border-bottom-right-radius: 40px;
+		border-bottom-left-radius: 40px;
+	}
+	// .feedback-form__item
+
+	&__item {
+		max-width: 440px;
+		display: flex;
+		justify-content: space-between;
+		margin: auto;
+	}
+
+	// .feedback-form__item-text
+
+	&__item-text {
+		font-style: italic;
+		font-size: 16px;
+		font-weight: 300;
+		position: relative;
+		margin: 0px 0px 30px 20px;
+		&:first-child{
+			margin: 0px 30px 0px 45px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			top: -9px;
+			left: -44px;
+			width: 36px;
+			height: 36px;
+			background-image: url(../img/form/icon2.png) ;
+			background-size: contain;
+		}
+	}
+
+	// .feedback-form__callback
+
+	&__callback {
+		
+		width: 440px;
+		margin: 0 auto;
+		white-space: nowrap;
+	}
+
+	// .feedback-form__tell
+
+	&__tell {
+		width: 50%;
+		display: inline-block;
+		padding-right: 10px;
+	}
+
+	// .feedback-form__btn
+
+	&__btn {
+		width: 50%;
+		display: inline-block;
+		align-items: center;
+		padding-left: 10px;
+		position: relative;
+		top: -3px;
+		left: 0;
+		transition: all .1s linear;
+		&:hover{
+			top: 0px;
+		}
+	}
+
+
+	&__tell1 {
+		height: 60px;
+		width: 100%;
+		border-radius: 30px;
+		padding: 0px 0px 0px 25px;
+		
+	}
+
+	&__btn1 {
+		width: 100%;
+		background-color: $mainColor;
+		align-items: center;
+		padding: 17px;
+		border-radius: 30px;
+		text-transform: uppercase;
+		font-weight: 500;
+		box-shadow: 0 6px 0 0 #016d62;
+		&:hover{
+			box-shadow: 0 4px 0 0 #016d62;
+		}
+	}
+}
+
