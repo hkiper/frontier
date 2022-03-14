@@ -24,7 +24,7 @@ section {
 }
 
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 html,
@@ -90,7 +90,7 @@ h6 {
 }
 
 body {
-  color: #00887A;
+  color: #00887a;
 }
 
 body._lock {
@@ -897,7 +897,7 @@ body.ie ._ibg img {
 }
 
 .header-top__wpapp {
-  background-color: #00887A;
+  background-color: #00887a;
 }
 
 .header-top__logo {
@@ -966,6 +966,9 @@ body.ie ._ibg img {
 }
 
 .header-bottom__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -981,6 +984,10 @@ body.ie ._ibg img {
   font-size: 15px;
   font-weight: 500;
   color: #fff;
+}
+
+.header-bottom__link:hover {
+  color: #ffe400;
 }
 
 .menu__body._active {
@@ -1008,7 +1015,7 @@ body.ie ._ibg img {
 }
 
 .page__feedback-form {
-  background-color: #00887A;
+  background-color: #00887a;
   color: black;
 }
 
@@ -1019,35 +1026,32 @@ body.ie ._ibg img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 559px;
   padding: 0px 20px;
 }
 
 ._no-webp .feedback-form::before{
-  background-image: url(../img/form/head1.png); }
+  background-image: url(../img/form/head1.jpg); }
 
 .feedback-form::before {
   content: "";
-  width: 659px;
-  height: 515px;
+  width: 615px;
+  height: 450px;
   background-size: contain;
   background-repeat: no-repeat;
   position: relative;
   top: 10px;
-  left: 32px;
+  left: 0px;
   z-index: 5;
-}
-
-.feedback-form__img {
-  /* position: absolute;
-  top: 0;
-  left: 0; */
 }
 
 .feedback-form__form {
   width: 600px;
   border-radius: 40px;
   background-color: #fff;
-  margin: 80px 0px 110px 0px;
 }
 
 .feedback-form__top {
@@ -1064,7 +1068,6 @@ body.ie ._ibg img {
 
 .feedback-form__text {
   text-align: center;
-  font-size: 18px;
   margin-bottom: 30px;
 }
 
@@ -1151,7 +1154,7 @@ body.ie ._ibg img {
 
 .feedback-form__btn1 {
   width: 100%;
-  background-color: #00887A;
+  background-color: #00887a;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1167,6 +1170,114 @@ body.ie ._ibg img {
   -webkit-box-shadow: 0 4px 0 0 #016d62;
           box-shadow: 0 4px 0 0 #016d62;
 }
+
+.services {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.services__wrapp {
+  background-color: #f0f8ff;
+}
+
+.services__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.services__item {
+  margin: 20px;
+  /* padding: 20px; */
+  width: 20%;
+}
+
+.services__link {
+  /* min-width: 205px; */
+  display: block;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.services__link:hover {
+  -webkit-box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+  -webkit-transform: translateY(-8px);
+      -ms-transform: translateY(-8px);
+          transform: translateY(-8px);
+  -webkit-transition: all 0.5s ease 0s;
+  -o-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+
+.services__img {
+  height: 210px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.services__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  height: 140px;
+  padding: 20px;
+  background: #00887a;
+  color: #fff;
+  font-weight: 400;
+  line-height: 22px;
+}
+
+.caption {
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  margin: 60px 0px 20px 0px;
+}
+
+.caption-smoll {
+  font-weight: 400;
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+._no-webp .img-spt{
+  background-image: url(../img/servise/service-1.jpg); }
+
+._no-webp .img-sks{
+  background-image: url(../img/servise/service-2.jpg); }
+
+._no-webp .img-domofon{
+  background-image: url(../img/servise/service-3.jpg); }
+
+._no-webp .img-video{
+  background-image: url(../img/servise/service-4.jpg); }
+
+._no-webp .img-hlagbaum{
+  background-image: url(../img/servise/service-5.jpg); }
 
 @media (min-width: 991.98px) {
   .quantity__button:hover::before,
@@ -1217,6 +1328,25 @@ body.ie ._ibg img {
 
   .feedback-form::before {
     display: none;
+  }
+
+  .services__items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+
+  .services__item {
+    /* padding: 10px; */
+    margin: 10px;
+    max-width: 205px;
+    width: 33.3333%;
+  }
+
+  .caption {
+    font-size: 38px;
   }
 }
 
@@ -1285,7 +1415,7 @@ body.ie ._ibg img {
     -webkit-transform: translate(-100%, 90px);
         -ms-transform: translate(-100%, 90px);
             transform: translate(-100%, 90px);
-    background-color: #00887A;
+    background-color: #00887a;
     padding: 20px 0px 30px 0px;
     -webkit-transition: all 0.8s ease 0s;
     -o-transition: all 0.8s ease 0s;
@@ -1348,6 +1478,12 @@ body.ie ._ibg img {
             transform: rotate(45deg);
     bottom: calc(50% - 1px);
   }
+
+  .services__item {
+    margin: 10px;
+    max-width: 205px;
+    width: 50%;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -1374,3 +1510,13 @@ body.ie ._ibg img {
 ._webp .feedback-form::before{ background-image: url(../img/form/head1.webp); }
 
 ._webp .feedback-form__item-text::before{ background-image: url(../img/form/icon2.webp); }
+
+._webp .img-spt{ background-image: url(../img/servise/service-1.webp); }
+
+._webp .img-sks{ background-image: url(../img/servise/service-2.webp); }
+
+._webp .img-domofon{ background-image: url(../img/servise/service-3.webp); }
+
+._webp .img-video{ background-image: url(../img/servise/service-4.webp); }
+
+._webp .img-hlagbaum{ background-image: url(../img/servise/service-5.webp); }

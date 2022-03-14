@@ -15,8 +15,8 @@
 //</Иконочные шрифты>==========================================================================================
 
 //<Шрифт по умолчанию>==========================================================================================
-$fontFamily: 'Roboto';
-$fontSize: 16;
+$fontFamily: "Roboto";
+$fontSize: 18;
 //</Шрифт по умолчанию>==========================================================================================
 
 //</ШРИФТЫ>=======================================================================================================
@@ -30,11 +30,10 @@ $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
 
-$mainColor: #00887A;
-$mainColor2: #fff; 
+$mainColor: #00887a;
+$mainColor2: #fff;
 $fontColor: #fff;
 $fontColor2: black;
-
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
@@ -108,27 +107,29 @@ body {
 	&__feedback-form {
 		background-color: $mainColor;
 		color: $fontColor2;
-		
 	}
 }
 .feedback-form {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+	height: 559px;
 	padding: 0px 20px;
+
 	@media (max-width: $md1+px) {
 		justify-content: center;
 	}
 
-	&::before{
+	&::before {
 		content: "";
-		width: 659px;
-		height: 515px;
-		background-image: url(../img/form/head1.png);
+		width: 615px;
+		height: 450px;
+		background-image: url(../img/form/head1.jpg);
 		background-size: contain;
-	   background-repeat: no-repeat;
+		background-repeat: no-repeat;
 		position: relative;
 		top: 10px;
-		left: 32px;
+		left: 0px;
 		z-index: 5;
 		@media (max-width: $md1+px) {
 			display: none;
@@ -137,10 +138,6 @@ body {
 	// .feedback-form__img
 
 	&__img {
-		
-		/* position: absolute;
-		top: 0;
-		left: 0; */
 	}
 
 	// .feedback-form__form
@@ -149,8 +146,6 @@ body {
 		width: 600px;
 		border-radius: 40px;
 		background-color: $mainColor2;
-		margin: 80px 0px 110px 0px;
-		
 	}
 
 	// .feedback-form__top
@@ -166,14 +161,13 @@ body {
 		text-align: center;
 		font-size: 40px;
 		font-weight: 600;
-		margin: 40px 0px 20px 0px;	
+		margin: 40px 0px 20px 0px;
 	}
 
 	// .feedback-form__text
 
 	&__text {
 		text-align: center;
-		font-size: 18px;
 		margin-bottom: 30px;
 	}
 
@@ -202,7 +196,7 @@ body {
 		font-weight: 300;
 		position: relative;
 		margin: 0px 0px 30px 20px;
-		&:first-child{
+		&:first-child {
 			margin: 0px 30px 0px 45px;
 		}
 
@@ -213,7 +207,7 @@ body {
 			left: -44px;
 			width: 36px;
 			height: 36px;
-			background-image: url(../img/form/icon2.png) ;
+			background-image: url(../img/form/icon2.png);
 			background-size: contain;
 		}
 	}
@@ -221,7 +215,6 @@ body {
 	// .feedback-form__callback
 
 	&__callback {
-		
 		width: 440px;
 		margin: 0 auto;
 		white-space: nowrap;
@@ -245,19 +238,17 @@ body {
 		position: relative;
 		top: -3px;
 		left: 0;
-		transition: all .1s linear;
-		&:hover{
+		transition: all 0.1s linear;
+		&:hover {
 			top: 0px;
 		}
 	}
-
 
 	&__tell1 {
 		height: 60px;
 		width: 100%;
 		border-radius: 30px;
 		padding: 0px 0px 0px 25px;
-		
 	}
 
 	&__btn1 {
@@ -269,9 +260,124 @@ body {
 		text-transform: uppercase;
 		font-weight: 500;
 		box-shadow: 0 6px 0 0 #016d62;
-		&:hover{
+		&:hover {
 			box-shadow: 0 4px 0 0 #016d62;
 		}
 	}
 }
+//===================================================================
+
+.services {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	// .services__wrapp
+	
+	&__wrapp {
+		background-color: #f0f8ff;
+	}
+	// .services__items
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+		@media (max-width: $md1+px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+
+	// .services__item
+
+	&__item {
+		margin: 20px;
+		/* padding: 20px; */
+		width: 20%;
+		
+		@media (max-width: $md1+px) {
+			/* padding: 10px; */
+			margin: 10px;
+			max-width: 205px;
+			width: 33.3333%;
+		}
+		@media (max-width: $md2+px) {
+			margin: 10px;
+			max-width: 205px;
+			width: 50%;
+		}
+	}
+	
+	// .services__link
+	
+	&__link {
+		/* min-width: 205px; */
+		display: block;
+		border-radius: 30px;
+		overflow: hidden;
+		&:hover {
+			box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+			transform: translateY(-8px);
+			transition: all 0.5s ease 0s;
+		}
+	}
+
+	// .services__img
+
+	&__img {
+		height: 210px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+	}
+
+	// .services__text
+
+	&__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		height: 140px;
+		padding: 20px;
+		background: $mainColor;
+		color: $mainColor2;
+		font-weight: 400;
+		line-height: 22px;
+	}
+}
+
+.caption {
+	font-size: 40px;
+	font-weight: 700;
+	color: #000;
+	text-align: center;
+	margin: 60px 0px 20px 0px;
+	@media (max-width: $md1+px) {
+		font-size: 38px;
+	}
+}
+.caption-smoll {
+	font-weight: 400;
+	color: #000;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.img-spt {
+	background-image: url(../img/servise/service-1.jpg);
+}
+.img-sks {
+	background-image: url(../img/servise/service-2.jpg);
+}
+.img-domofon {
+	background-image: url(../img/servise/service-3.jpg);
+}
+.img-video {
+	background-image: url(../img/servise/service-4.jpg);
+}
+.img-hlagbaum {
+	background-image: url(../img/servise/service-5.jpg);
+}
+//==============================================================
 
