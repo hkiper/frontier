@@ -71,7 +71,7 @@ body {
 	}
 	@media (max-width: $md3+px) {
 		max-width: none;
-		padding: 0 10px;
+		/* padding: 0 10px; */
 	}
 }
 
@@ -203,9 +203,9 @@ body {
 			flex-direction: column;
 		}
 	}
-	
+
 	// .feedback-form__item-text
-	
+
 	&__item-text {
 		position: relative;
 		font-style: italic;
@@ -217,10 +217,10 @@ body {
 		}
 		@media (max-width: 600px) {
 			padding-left: 70px;
-			
-			margin: 0px 0px 20px 20px;
+
+			margin: 0px 0px 35px 20px;
 			&:first-child {
-				margin: 20px 50px 35px 20px;
+				margin: 0px 50px 35px 20px;
 			}
 		}
 
@@ -248,11 +248,11 @@ body {
 			display: flex;
 			justify-content: center;
 			margin: 0px;
-		  }
+		}
 	}
-	
+
 	// .feedback-form__items
-	
+
 	&__items {
 		display: flex;
 		flex-direction: row;
@@ -262,11 +262,11 @@ body {
 		padding-right: 10px;
 		white-space: nowrap;
 		@media (max-width: 600px) {
-		 flex-direction: column;
-		 white-space:normal;	 
-		 margin-left: 10px;
+			flex-direction: column;
+			white-space: normal;
+			margin-left: 10px;
 		}
-}
+	}
 
 	// .feedback-form__tell
 
@@ -313,16 +313,16 @@ body {
 	}
 
 	&__btn1 {
-		background-color: $mainColor;
+		background-color: #ffe400;
 		white-space: nowrap;
 		align-items: center;
 		padding: 17px;
 		border-radius: 30px;
 		text-transform: uppercase;
 		font-weight: 500;
-		box-shadow: 0 6px 0 0 #016d62;
+		box-shadow: 0 6px 0 0#d1bc03;
 		&:hover {
-			box-shadow: 0 4px 0 0 #016d62;
+			box-shadow: 0 4px 0 0 #b8a609;
 		}
 		@media (max-width: 600px) {
 			width: 285px;
@@ -335,6 +335,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 60px 0px;
 
 	// .services__wrapp
 
@@ -365,7 +366,6 @@ body {
 		width: 20%;
 
 		@media (max-width: $md1+px) {
-			/* padding: 10px; */
 			margin: 10px;
 			max-width: 205px;
 			width: 33.3333%;
@@ -386,7 +386,6 @@ body {
 	// .services__link
 
 	&__link {
-		/* min-width: 205px; */
 		display: block;
 		border-radius: 30px;
 		overflow: hidden;
@@ -404,7 +403,6 @@ body {
 	// .services__img
 
 	&__img {
-		display: block;
 		height: 210px;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -433,7 +431,6 @@ body {
 			height: 135px;
 			width: 100%;
 			max-width: 410px;
-			/* font-size: 20px; */
 			padding: 0px 10px;
 		}
 	}
@@ -444,9 +441,12 @@ body {
 	font-weight: 700;
 	color: #000;
 	text-align: center;
-	margin: 60px 0px 20px 0px;
+	margin: 0px 0px 20px 0px;
 	@media (max-width: $md1+px) {
 		font-size: 38px;
+	}
+	@media (max-width: 600px) {
+		font-size: 32px;
 	}
 }
 .caption-smoll {
@@ -454,6 +454,10 @@ body {
 	color: #000;
 	text-align: center;
 	margin-bottom: 20px;
+	line-height: 20px;
+	@media (max-width: 600px) {
+		font-size: 17px;
+	}
 }
 .img-spt {
 	background-image: url(../img/servise/service-1.jpg);
@@ -471,3 +475,107 @@ body {
 	background-image: url(../img/servise/service-5.jpg);
 }
 //==============================================================
+.warranty {
+
+	// .warranty__wrapp
+
+	&__wrapp {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding: 40px 10px;
+	}
+
+	// .warranty__body-text
+
+	&__body-text {
+		width: 800px;
+		@media (max-width: $md2+px) {
+			width: 100%;
+		}
+	}
+
+	// .warranty__text
+
+	&__text {
+		margin-bottom: 20px;
+		line-height: 23px;
+		font-weight: 400;
+		color:#000;
+	}
+
+	// .warranty__items
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		@media (max-width: 600px) {
+			justify-content: center;
+		}
+	}
+
+	// .warranty__item
+
+	&__item {
+		display: flex;
+		flex-direction: row-reverse;
+		width: 50%;
+		height: 80px;
+		margin: 20px 0px;
+		@media (max-width: 600px) {
+			width: 90%;
+		}
+	}
+
+// .warranty__item-text
+
+&__item-text {
+	flex: 1;
+	line-height: 23px;
+	font-weight: 300;
+	color: #000;
+	align-items: center;
+	padding-top: 15px;
+	@media (max-width: $md2+px) {
+		margin-right: 20px;
+	}
+	
+	
+}
+
+	// .warranty__body-img
+
+	&__body-img {
+		width: 400px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		background-image: url(../img/warranty/handshake-epa.svg);
+		@media (max-width: $md2+px) {
+			display: none;
+		}
+	}
+}
+
+.warranty-img {
+		height: 90px;
+		width: 90px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		margin-right: 10px;
+}
+	.num-1 {
+		background-image: url(../img/warranty/1.svg);
+	}
+	.num-2 {
+		background-image: url(../img/warranty/2.svg);
+	}
+	.num-3 {
+		background-image: url(../img/warranty/3.svg);
+	}
+	.num-4 {
+		background-image: url(../img/warranty/4.svg);
+	}
+
+//===========================================================================================================
+
