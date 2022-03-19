@@ -35,13 +35,14 @@ $mainColor: #00887a;
 $mainColor2: #fff;
 $fontColor: #fff;
 $fontColor2: black;
+$fontColor3: #f0f8ff;
 
 //</ПЕРЕМЕННЫЕ>===========================================================================================================
 
 //<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
 @import "null";
 body {
-	color: $mainColor;
+	color: $fontColor2;
 	&._lock {
 		overflow: hidden;
 	}
@@ -95,6 +96,8 @@ body {
 @import "header";
 @import "footer";
 @import "home";
+@import "fireSaferty";
+
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
@@ -116,28 +119,23 @@ body {
 	align-items: center;
 	height: 559px;
 	padding: 320px 20px;
-
+	width: 100%;
+	box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.7) inset;
 	@media (max-width: $md1+px) {
 		justify-content: center;
 	}
+	// .feedback-form__img
 
-	&::before {
-		content: "";
+	&__img {
 		width: 615px;
 		height: 450px;
 		background-image: url(../img/form/head1.jpg);
 		background-size: contain;
 		background-repeat: no-repeat;
-		position: relative;
-		top: 10px;
-		left: 0px;
-		z-index: 5;
 		@media (max-width: $md1+px) {
 			display: none;
 		}
 	}
-
-	// .feedback-form__form
 
 	&__form {
 		width: 600px;
@@ -166,8 +164,7 @@ body {
 		text-align: center;
 		font-size: 40px;
 		font-weight: 600;
-		margin: 40px 0px 20px 0px;
-		color: $fontColor2;
+		margin: 40px 10px 20px 10px;
 	}
 
 	// .feedback-form__text
@@ -257,7 +254,6 @@ body {
 	// .feedback-form__tell
 
 	&__tell {
-		
 		width: 230px;
 		@media (max-width: 600px) {
 			width: 255px;
@@ -314,7 +310,8 @@ body {
 	// .services__wrapp
 
 	&__wrapp {
-		background-color: #f0f8ff;
+		background-color: $fontColor3;
+		box-shadow: 2px 2px 26px -6px rgba(34, 60, 80, 0.51) inset;
 	}
 	// .services__items
 
@@ -409,7 +406,6 @@ body {
 .caption {
 	font-size: 40px;
 	font-weight: 700;
-	color: #000;
 	text-align: center;
 	padding: 0px 15px;
 	margin: 0px 0px 20px 0px;
@@ -422,7 +418,6 @@ body {
 }
 .caption-smoll {
 	font-weight: 400;
-	color: #000;
 	text-align: center;
 	padding: 0px 15px;
 	margin-bottom: 20px;
@@ -479,7 +474,6 @@ body {
 		margin: 30px 0px 60px 0px;
 		line-height: 23px;
 		font-weight: 400;
-		color: #000;
 		@media (max-width: $md2+px) {
 			text-align: center;
 		}
@@ -518,7 +512,6 @@ body {
 		flex: 1;
 		line-height: 23px;
 		font-weight: 300;
-		color: #000;
 		align-items: center;
 		padding-top: 20px;
 		@media (max-width: $md2+px) {
@@ -566,7 +559,8 @@ body {
 //===========================================================================================================
 
 .steps {
-	background-color: #f0f8ff;
+	background-color: $fontColor3;
+	box-shadow: 2px 2px 26px -6px rgba(34, 60, 80, 0.51) inset;
 	// .steps__wrapp
 
 	&__wrapp {
@@ -582,7 +576,6 @@ body {
 
 	&__text {
 		margin-bottom: 40px;
-		color: #000;
 		font-weight: 400;
 		line-height: 20px;
 		text-align: center;
@@ -704,7 +697,7 @@ body {
 }
 
 .step {
-	color: rgb(255, 250, 250);
+	color: $fontColor3;
 	position: relative;
 	margin: 0px 0px 40px 0px;
 	@media (max-width: $md2+px) {
@@ -751,7 +744,6 @@ body {
 	// .step__title
 
 	&__title {
-		color: #000;
 		font-weight: 900;
 		font-size: 25px;
 		line-height: 20px;
@@ -763,7 +755,6 @@ body {
 
 	&__text {
 		position: relative;
-		color: #000;
 		font-weight: 400;
 		line-height: 25px;
 		margin-bottom: 50px;

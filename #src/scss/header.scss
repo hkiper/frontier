@@ -181,17 +181,6 @@
 			line-height: 40px;
 		}
 	}
-
-	// .header-bottom__link
-
-	&_hidden {
-		@media (max-width: $md1+px) {
-			display: none;
-		}
-		@media (max-width: $md2+px) {
-			display: block;
-		}
-	}
 }
 
 .menu__body {
