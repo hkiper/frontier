@@ -270,8 +270,6 @@ body {
 	}
 }
 .btnV1 {
-	display: inline;
-	align-items: center;
 	position: relative;
 	top: 0px;
 	left: 0;
@@ -282,12 +280,14 @@ body {
 }
 
 .btnV2 {
+	display:inline-block;
 	width: 230px;
 	border-radius: 30px;
 	padding: 16px;
-	align-items: center;
+	text-align: center;
 	text-transform: uppercase;
 	font-weight: 600;
+	color: black;
 	background-color: #ffe400;
 	box-shadow: 0 6px 0 0#d1bc03;
 	&:hover {
@@ -334,6 +334,7 @@ body {
 	&__item {
 		margin: 20px;
 		width: 20%;
+		
 
 		@media (max-width: $md1+px) {
 			margin: 10px;
@@ -848,3 +849,34 @@ body {
 		}
 	}
 }
+//================================================================
+/* .popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	border-color:rgba(0, 0, 0, 0.87);
+	// .popup__body
+
+	&__body {
+	}
+
+	// .popup__content
+
+	&__content {
+	}
+
+	// .popup__close
+
+	&__close {
+	}
+
+	// .popup__title
+
+	&__title {
+	}
+
+	// .popup__text
+
+	&__text {
+	}
+} */

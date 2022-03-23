@@ -15,6 +15,7 @@
 	}
 
 	&__logo {
+		display: flex;
 		position: relative;
 		margin-right: 20px;
 	}
@@ -43,13 +44,15 @@
 	//header-top__logo-text
 
 	.header-top__logo-text {
+		display: flex;
+		align-items: center;
 		font-size: 30px;
-		color: #ffe400;
-		text-transform: uppercase;
 		font-weight: 900;
+		text-transform: uppercase;
 		letter-spacing: 2px;
+		color: #ffe400;
+		margin-left: 15px;
 		text-shadow: 1px 2px 2px rgb(11, 14, 12), 1px 0px 0px #0c0e0b;
-
 		@media (max-width: $md3+px) {
 			font-size: 25px;
 		}
@@ -60,10 +63,6 @@
 			@media (max-width: $md1+px) {
 				display: none;
 			}
-		}
-		@media (max-width: $md1+px) {
-			text-align: left;
-			width: 380px;
 		}
 	}
 

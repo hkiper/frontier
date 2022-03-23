@@ -21,12 +21,15 @@
 		"gulp-sass": "latest",
 		"gulp-ttf2woff": "latest",
 		"gulp-ttf2woff2": "latest",
-		"gulp-uglify-es": "latest",
+		"gulp-uglify-es": "^3.0.0",
 		"gulp-webp-html": "latest",
 		"gulp-webpcss": "latest",
 		"imagemin-webp": "latest",
 		"sass": "latest",
 		"transform-runtime": "0.0.0",
 		"webp-converter": "2.2.3"
+	},
+	"dependencies": {
+		"aos": "^2.3.4"
 	}
 }

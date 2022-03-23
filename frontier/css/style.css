@@ -905,6 +905,9 @@ body.ie ._ibg img {
 }
 
 .header-top__logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   margin-right: 20px;
 }
@@ -929,11 +932,18 @@ body.ie ._ibg img {
 }
 
 .header-top .header-top__logo-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 30px;
-  color: #ffe400;
-  text-transform: uppercase;
   font-weight: 900;
+  text-transform: uppercase;
   letter-spacing: 2px;
+  color: #ffe400;
+  margin-left: 15px;
   text-shadow: 1px 2px 2px #0b0e0c, 1px 0px 0px #0c0e0b;
 }
 
@@ -1393,8 +1403,6 @@ body.ie ._ibg img {
   height: 100px;
   color: #fff;
   text-shadow: 1px 3px 3px #0c0e0d, 1px 0px 0px #10110f;
-  /* background-color: #e9d203; */
-  /* border-radius: 30px; */
 }
 
 .manual__item-span::after {
@@ -1553,7 +1561,7 @@ body.ie ._ibg img {
 }
 
 .license__wrapp {
-  padding: 80px 0px;
+  padding: 80px 0px 50px 0px;
 }
 
 .license__colums {
@@ -1828,10 +1836,6 @@ body.ie ._ibg img {
 }
 
 .btnV1 {
-  display: inline;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
   top: 0px;
   left: 0;
@@ -1845,14 +1849,14 @@ body.ie ._ibg img {
 }
 
 .btnV2 {
+  display: inline-block;
   width: 230px;
   border-radius: 30px;
   padding: 16px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: center;
   text-transform: uppercase;
   font-weight: 600;
+  color: black;
   background-color: #ffe400;
   -webkit-box-shadow: 0 6px 0 0 #d1bc03;
           box-shadow: 0 6px 0 0 #d1bc03;
@@ -2289,6 +2293,37 @@ body.ie ._ibg img {
   position: absolute;
 }
 
+/* .popup {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	border-color:rgba(0, 0, 0, 0.87);
+	// .popup__body
+
+	&__body {
+	}
+
+	// .popup__content
+
+	&__content {
+	}
+
+	// .popup__close
+
+	&__close {
+	}
+
+	// .popup__title
+
+	&__title {
+	}
+
+	// .popup__text
+
+	&__text {
+	}
+} */
+
 @media (min-width: 991.98px) {
   .quantity__button:hover::before,
   .quantity__button:hover::after {
@@ -2313,11 +2348,6 @@ body.ie ._ibg img {
 
   .header-top .header-top__logo-text span {
     display: none;
-  }
-
-  .header-top .header-top__logo-text {
-    text-align: left;
-    width: 380px;
   }
 
   .header-bottom__link {
