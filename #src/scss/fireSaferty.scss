@@ -386,7 +386,6 @@
 			font-style: italic;
 			border-left: 5px solid $mainColor;
 			padding-left: 20px;
-			
 		}
 	}
 
@@ -427,6 +426,27 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-image: url(../img/licence/licence-2.png);
+	}
+
+	&__img-2,
+	&__img-1 {
+		&_size {
+			margin: 0px 0px 0px 0px;
+			width: 530px;
+			height: 760px;
+			&:active {
+				width: 600px;
+				height: 860px;
+			}
+			@media (max-width: 600px) {
+				width: 400px;
+				height: 570px;
+			}
+			@media (max-width: 450px) {
+				width: 300px;
+				height: 430px;
+			}
+		}
 	}
 }
 
@@ -480,8 +500,16 @@
 			@media (max-width: 400px) {
 				left: -16px;
 			}
+			@keyframes wipe-enter {
+				0% {
+				  transform: scale(0, .025);
+				}
+				50% {
+				  transform: scale(1, .025);
+				}
+			 }
 		}
-		
+
 		@media (max-width: $md1+px) {
 			width: 100%;
 		}

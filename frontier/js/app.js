@@ -388,16 +388,17 @@ function digi_animate_value(el, start, end, duration) {
 }
 //=================
 //Popups
+
 let popup_link = document.querySelectorAll('._popup-link');
 let popups = document.querySelectorAll('.popup');
 for (let index = 0; index < popup_link.length; index++) {
 	const el = popup_link[index];
 	el.addEventListener('click', function (e) {
 		if (unlock) {
-			let item = el.getAttribute('href').replace('#', '');
+			let item = el.getAttribute('id').replace('#', '');
 			let video = el.getAttribute('data-video');
 			popup_open(item, video);
-		}
+		} 
 		e.preventDefault();
 	})
 }
@@ -953,13 +954,6 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 const da = new DynamicAdapt("max");
 da.init();
 
-
-
-
-
-
-
- 
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
 if (forms.length > 0) {

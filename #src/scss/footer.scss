@@ -182,15 +182,16 @@
 //====================================================================================================
 .form-footer {
  width: 400px;
- border-radius: 40px;
-		background-color: $mainColor2;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.33);
-		@media (max-width: 600px) {
-			width: 300px;
-		}
+ 
+border-radius: 40px;
+background-color: $mainColor2;
+display: flex;
+flex-direction: column;
+justify-content: center;
+box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.33);
+@media (max-width: 600px) {
+	width: 300px;
+}
 // .form-footer__top
 
 &__top {
