@@ -1301,16 +1301,6 @@ body.ie ._ibg img {
           box-shadow: 0 4px 0 0 #b8a609;
 }
 
-._no-webp .feedback-form__img-fire-saferty{
-  background-image: url(../img/form/head-fire.png); }
-
-.feedback-form__img-fire-saferty {
-  width: 615px;
-  height: 450px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .info__wrapper {
   padding: 80px 0px 30px 0px;
 }
@@ -1325,14 +1315,9 @@ body.ie ._ibg img {
           justify-content: space-between;
 }
 
-._no-webp .info__column-img{
-  background-image: url(../img/info/info-fire.png); }
-
-.info__column-img {
-  width: 530px;
-  height: 540px;
-  background-size: contain;
-  background-repeat: no-repeat;
+.info__column-img img {
+  max-width: 530px;
+  max-height: 540px;
 }
 
 .info__column-text {
@@ -1454,22 +1439,11 @@ body.ie ._ibg img {
   position: relative;
 }
 
-.manual__item-img {
+.manual__item-img img {
   width: 150px;
   height: 150px;
   margin: 30px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
-
-._no-webp .manual__item-img_1{
-  background-image: url(../img/manual/manual-1.png); }
-
-._no-webp .manual__item-img_2{
-  background-image: url(../img/manual/manual-2.png); }
-
-._no-webp .manual__item-img_3{
-  background-image: url(../img/manual/manual-3.png); }
 
 .manual__item-title {
   font-size: 26px;
@@ -1544,15 +1518,10 @@ body.ie ._ibg img {
   border-right: 3px dotted #10110f4f;
 }
 
-._no-webp .option__img-1{
-  background-image: url(../img/option/option-1.png); }
-
-.option__img-1 {
+.option__img img {
   width: 350px;
   height: 310px;
   margin: 20px 0px 20px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .option__text {
@@ -1562,17 +1531,6 @@ body.ie ._ibg img {
 
 .option__text li {
   margin: 20px 0px;
-}
-
-._no-webp .option__img-2{
-  background-image: url(../img/option/option-2.png); }
-
-.option__img-2 {
-  width: 350px;
-  height: 310px;
-  margin: 20px 0px 20px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .license {
@@ -1625,36 +1583,19 @@ body.ie ._ibg img {
   padding: 15px;
 }
 
-._no-webp .license__img-1{
-  background-image: url(../img/licence/licence-1.png); }
-
-.license__img-1 {
+.license__img img {
   width: 240px;
   height: 350px;
   margin: 0px 30px 0px 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
-._no-webp .license__img-2{
-  background-image: url(../img/licence/licence-2.png); }
-
-.license__img-2 {
-  width: 240px;
-  height: 350px;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.license__img-2_size,
-.license__img-1_size {
+.license__img_size img {
   margin: 0px 0px 0px 0px;
   width: 530px;
   height: 760px;
 }
 
-.license__img-2_size:active,
-.license__img-1_size:active {
+.license__img_size img:active {
   width: 600px;
   height: 860px;
 }
@@ -1712,26 +1653,68 @@ body.ie ._ibg img {
 
 @-webkit-keyframes wipe-enter {
   0% {
-    -webkit-transform: scale(0, 0.025);
-            transform: scale(0, 0.025);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    opacity: 0;
   }
 
-  50% {
-    -webkit-transform: scale(1, 0.025);
-            transform: scale(1, 0.025);
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    opacity: 1;
   }
 }
 
 @keyframes wipe-enter {
   0% {
-    -webkit-transform: scale(0, 0.025);
-            transform: scale(0, 0.025);
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+    opacity: 0;
   }
 
-  50% {
-    -webkit-transform: scale(1, 0.025);
-            transform: scale(1, 0.025);
+  100% {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+    opacity: 1;
   }
+}
+
+.square-animation {
+  -webkit-animation: wipe-enter 2s 1;
+          animation: wipe-enter 2s 1;
+}
+
+@-webkit-keyframes visible-enter {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes visible-enter {
+  0% {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.visible-animation {
+  -webkit-animation: visible-enter 2s 1;
+          animation: visible-enter 2s 1;
 }
 
 .page {
@@ -1762,14 +1745,9 @@ body.ie ._ibg img {
           box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.7) inset;
 }
 
-._no-webp .feedback-form__img{
-  background-image: url(../img/form/head-1.png); }
-
-.feedback-form__img {
+.feedback-form__img img {
   width: 615px;
   height: 450px;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 .feedback-form__form {
@@ -2094,12 +2072,8 @@ body.ie ._ibg img {
   padding-top: 20px;
 }
 
-.warranty__body-img {
+.warranty__body-img img {
   width: 400px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  background-image: url(../img/warranty/handshake-epa.svg);
 }
 
 .warranty-img {
@@ -2352,37 +2326,6 @@ body.ie ._ibg img {
   position: absolute;
 }
 
-/* .popup {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	border-color:rgba(0, 0, 0, 0.87);
-	// .popup__body
-
-	&__body {
-	}
-
-	// .popup__content
-
-	&__content {
-	}
-
-	// .popup__close
-
-	&__close {
-	}
-
-	// .popup__title
-
-	&__title {
-	}
-
-	// .popup__text
-
-	&__text {
-	}
-} */
-
 @media (min-width: 991.98px) {
   .quantity__button:hover::before,
   .quantity__button:hover::after {
@@ -2414,10 +2357,6 @@ body.ie ._ibg img {
     line-height: 40px;
   }
 
-  .feedback-form__img-fire-saferty {
-    display: none;
-  }
-
   .caption-left {
     font-size: 38px;
   }
@@ -2440,7 +2379,7 @@ body.ie ._ibg img {
             justify-content: center;
   }
 
-  .feedback-form__img {
+  .feedback-form__img img {
     display: none;
   }
 
@@ -2635,9 +2574,12 @@ body.ie ._ibg img {
   }
 
   .info__column-img {
-    width: 430px;
-    height: 440px;
     margin: auto;
+  }
+
+  .info__column-img img {
+    max-width: 430px;
+    max-height: 440px;
   }
 
   .info__column-text {
@@ -2722,7 +2664,7 @@ body.ie ._ibg img {
     margin-right: 20px;
   }
 
-  .warranty__body-img {
+  .warranty__body-img img {
     display: none;
   }
 
@@ -2839,12 +2781,12 @@ body.ie ._ibg img {
     width: 100%;
   }
 
-  .option__text {
-    margin: 0px 0px 0px 0px;
+  .option__img img:last-child {
+    margin: 40px 0px 0px 0px;
   }
 
-  .option__img-2 {
-    margin: 40px 0px 0px 0px;
+  .option__text {
+    margin: 0px 0px 0px 0px;
   }
 
   .steps__colum-step1 {
@@ -2940,8 +2882,7 @@ body.ie ._ibg img {
     font-size: 32px;
   }
 
-  .license__img-2_size,
-  .license__img-1_size {
+  .license__img_size img {
     width: 400px;
     height: 570px;
   }
@@ -3026,9 +2967,9 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 500px) {
-  .info__column-img {
-    width: 300px;
-    height: 300px;
+  .info__column-img img {
+    max-width: 300px;
+    max-height: 300px;
     margin: auto;
   }
 
@@ -3046,7 +2987,7 @@ body.ie ._ibg img {
             align-items: center;
   }
 
-  .license__img-1 {
+  .license__img img {
     margin: 0px 0px 0px 0px;
   }
 }
@@ -3065,8 +3006,7 @@ body.ie ._ibg img {
 }
 
 @media (max-width: 450px) {
-  .license__img-2_size,
-  .license__img-1_size {
+  .license__img_size img {
     width: 300px;
     height: 430px;
   }
@@ -3102,27 +3042,7 @@ body.ie ._ibg img {
 
 ._webp .form-footer__text::before{ background-image: url(../img/form/icon2.webp); }
 
-._webp .feedback-form__img-fire-saferty{ background-image: url(../img/form/head-fire.webp); }
-
-._webp .info__column-img{ background-image: url(../img/info/info-fire.webp); }
-
-._webp .manual__item-img_1{ background-image: url(../img/manual/manual-1.webp); }
-
-._webp .manual__item-img_2{ background-image: url(../img/manual/manual-2.webp); }
-
-._webp .manual__item-img_3{ background-image: url(../img/manual/manual-3.webp); }
-
-._webp .option__img-1{ background-image: url(../img/option/option-1.webp); }
-
-._webp .option__img-2{ background-image: url(../img/option/option-2.webp); }
-
-._webp .license__img-1{ background-image: url(../img/licence/licence-1.webp); }
-
-._webp .license__img-2{ background-image: url(../img/licence/licence-2.webp); }
-
 ._webp .price__img{ background-image: url(../img/price/price.webp); }
-
-._webp .feedback-form__img{ background-image: url(../img/form/head-1.webp); }
 
 ._webp .feedback-form__item-text::before{ background-image: url(../img/form/icon2.webp); }
 
