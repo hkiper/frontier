@@ -25,9 +25,9 @@ function testWebP(callback) {
 }
 testWebP(function (support) {
 	if (support === true) {
-		document.querySelector('html').classList.add('_webp');
+		document.querySelector('html').classList.add('webp');
 	} else {
-		document.querySelector('html').classList.add('_no-webp');
+		document.querySelector('html').classList.add('no-webp');
 	}
 });
 
@@ -395,7 +395,7 @@ for (let index = 0; index < popup_link.length; index++) {
 	const el = popup_link[index];
 	el.addEventListener('click', function (e) {
 		if (unlock) {
-			let item = el.getAttribute('id').replace('#', '');
+			let item = el.getAttribute('data-po').replace('#', '');
 			let video = el.getAttribute('data-video');
 			popup_open(item, video);
 		} 
@@ -953,84 +953,36 @@ DynamicAdapt.prototype.arraySort = function (arr) {
 
 const da = new DynamicAdapt("max");
 da.init();
-(function () {
-	var square = document.querySelector('.square-wrapper');
- 
-	var observer = new IntersectionObserver(entries => {
-	  entries.forEach(entry => {
-		 var entrySquare = entry.target.querySelector('.square');
-		 if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
-			return;
-		 }
-		 
-		 if (entry.isIntersecting) {
-			if(entrySquare.classList.contains('square-animation')){
-				return;
-			} else {
-				entrySquare.classList.add('square-animation');
-				
-			}
-		 }
- 
-	
-	  });
+function onEntry(entry) {
+	entry.forEach(change => {
+	  if (change.isIntersecting) {
+		 change.target.classList.add('element-show');
+	  }
 	});
-	observer.observe(square);
- })();
- 
- //=========================================================================================
-
-/*  (function () {
-	var visible = document.querySelector('.visible-wrapper');
- 
-	var observerVis = new IntersectionObserver(entries => {
-	  entries.forEach(entry => {
-		 var entryVisible = entry.target.querySelector('.visibleAnim');
-		 if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
-			return;
-		 }
-		 if (entry.isIntersecting) {
-			if(entryVisible.classList.contains('visible-animation')){
-				return;
-			} else {
-				entryVisible.classList.add('visible-animation');
-				return;
-			}
-		 } */
-		/*  entryVisible.classList.remove('visible-animation'); */
-
-	  /* });
+ }
+ let options = { threshold: [0.0] };
+ let observer = new IntersectionObserver(onEntry, options);
+ let elements = document.querySelectorAll('.element-animation');
+ for (let elm of elements) {
+	observer.observe(elm);
+ }
+ //=================================================
+ function onEntry1(entry1) {
+	entry1.forEach(change1 => {
+	  if (change1.isIntersecting) {
+		 change1.target.classList.add('rotate-show');
+	  }
 	});
- 
-	observerVis.observe(visible);
- })(); */
-//=======================================================================================
+ }
+ let options1 = { threshold: [0.0] };
+ let observer1 = new IntersectionObserver(onEntry1, options);
+ let elements1 = document.querySelectorAll('.rotate');
+ for (let elm1 of elements1) {
+	observer1.observe(elm1);
+ }
 
-(function () {
-	var square1 = document.querySelector('.visible-wrapper');
- 
-	var observer = new IntersectionObserver(entries => {
-	  entries.forEach(entry => {
-		 var entrySquare = entry.target.querySelector('.visibleAnim');
-		 if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
-			return;
-		 }
-		 
-		 if (entry.isIntersecting) {
-			if(entrySquare.classList.contains('visible-animation')){
-				return;
-			} else {
-				entrySquare.classList.add('visible-animation');
-				
-			}
-		 }
- 
-	
-	  });
-	});
-	observer.observe(square1);
- })();
- 
+
+
 //let btn = document.querySelectorAll('button[type="submit"],input[type="submit"]');
 let forms = document.querySelectorAll('form');
 if (forms.length > 0) {

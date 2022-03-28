@@ -22,9 +22,9 @@ function testWebP(callback) {
 }
 testWebP(function (support) {
 	if (support === true) {
-		document.querySelector('html').classList.add('_webp');
+		document.querySelector('html').classList.add('webp');
 	} else {
-		document.querySelector('html').classList.add('_no-webp');
+		document.querySelector('html').classList.add('no-webp');
 	}
 });
 
@@ -392,7 +392,7 @@ for (let index = 0; index < popup_link.length; index++) {
 	const el = popup_link[index];
 	el.addEventListener('click', function (e) {
 		if (unlock) {
-			let item = el.getAttribute('id').replace('#', '');
+			let item = el.getAttribute('data-po').replace('#', '');
 			let video = el.getAttribute('data-video');
 			popup_open(item, video);
 		} 

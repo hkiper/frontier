@@ -86,8 +86,8 @@ function css() {
 		)
 		.pipe(webpcss(
 			{
-				webpClass: "._webp",
-				noWebpClass: "._no-webp"
+				webpClass: ".webp",
+				noWebpClass: ".no-webp"
 			}
 		))
 		.pipe(dest(path.build.css))

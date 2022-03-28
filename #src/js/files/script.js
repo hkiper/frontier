@@ -1,78 +1,29 @@
-(function () {
-	var square = document.querySelector('.square-wrapper');
- 
-	var observer = new IntersectionObserver(entries => {
-	  entries.forEach(entry => {
-		 var entrySquare = entry.target.querySelector('.square');
-		 if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
-			return;
-		 }
-		 
-		 if (entry.isIntersecting) {
-			if(entrySquare.classList.contains('square-animation')){
-				return;
-			} else {
-				entrySquare.classList.add('square-animation');
-				
-			}
-		 }
- 
-	
-	  });
+function onEntry(entry) {
+	entry.forEach(change => {
+	  if (change.isIntersecting) {
+		 change.target.classList.add('element-show');
+	  }
 	});
-	observer.observe(square);
- })();
- 
- //=========================================================================================
-
-/*  (function () {
-	var visible = document.querySelector('.visible-wrapper');
- 
-	var observerVis = new IntersectionObserver(entries => {
-	  entries.forEach(entry => {
-		 var entryVisible = entry.target.querySelector('.visibleAnim');
-		 if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
-			return;
-		 }
-		 if (entry.isIntersecting) {
-			if(entryVisible.classList.contains('visible-animation')){
-				return;
-			} else {
-				entryVisible.classList.add('visible-animation');
-				return;
-			}
-		 } */
-		/*  entryVisible.classList.remove('visible-animation'); */
-
-	  /* });
+ }
+ let options = { threshold: [0.0] };
+ let observer = new IntersectionObserver(onEntry, options);
+ let elements = document.querySelectorAll('.element-animation');
+ for (let elm of elements) {
+	observer.observe(elm);
+ }
+ //=================================================
+ function onEntry1(entry1) {
+	entry1.forEach(change1 => {
+	  if (change1.isIntersecting) {
+		 change1.target.classList.add('rotate-show');
+	  }
 	});
- 
-	observerVis.observe(visible);
- })(); */
-//=======================================================================================
+ }
+ let options1 = { threshold: [0.0] };
+ let observer1 = new IntersectionObserver(onEntry1, options);
+ let elements1 = document.querySelectorAll('.rotate');
+ for (let elm1 of elements1) {
+	observer1.observe(elm1);
+ }
 
-(function () {
-	var square1 = document.querySelector('.visible-wrapper');
- 
-	var observer = new IntersectionObserver(entries => {
-	  entries.forEach(entry => {
-		 var entrySquare = entry.target.querySelector('.visibleAnim');
-		 if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {
-			return;
-		 }
-		 
-		 if (entry.isIntersecting) {
-			if(entrySquare.classList.contains('visible-animation')){
-				return;
-			} else {
-				entrySquare.classList.add('visible-animation');
-				
-			}
-		 }
- 
-	
-	  });
-	});
-	observer.observe(square1);
- })();
- 
+

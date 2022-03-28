@@ -461,30 +461,4 @@
 	}
 }
 //=================================================
-@keyframes wipe-enter {
-	0% {
-		transform: rotateY(180deg);
-		opacity: 0;
-	}
-	100% {
-		transform: rotateY(0deg);
-		opacity: 1;
-	}
-}
-.square-animation {
-	animation: wipe-enter 2s 1;
-}
-//=================================================
-@keyframes visible-enter {
-	0% {
-		transform: translateY(100px);
-		opacity: 0;
-	}
-	100% {
-		transform: translateY(0px);
-		opacity: 1;
-	}
-}
-.visible-animation {
-	animation: visible-enter 2s 1;
-}
+

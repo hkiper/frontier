@@ -133,6 +133,13 @@ body {
 			display: none;
 		}
 	}
+	&__img {
+		width: 615px;
+		height: 450px;
+		@media (max-width: $md1+px) {
+			display: none;
+		}
+	}
 
 	&__form {
 		width: 600px;
@@ -379,9 +386,6 @@ body {
 		@media (max-width: 630px) {
 			height: 135px;
 			min-width: 135px;
-		}
-		&::after{
-
 		}
 	}
 
@@ -849,3 +853,20 @@ body {
 	}
 }
 //================================================================
+.rotate{
+	transition: all 1s;
+	transform: rotateY(180deg);
+}
+
+.element-animation {
+	opacity: 0;
+	transform: translateY(50px);
+ }
+ .element-animation.element-show {
+	opacity: 1;
+	transition: all 1s;
+	transform: translateY(0px);
+ }
+ .rotate.rotate-show{
+	transform: rotateY(0deg);
+ }

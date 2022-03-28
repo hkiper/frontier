@@ -1233,7 +1233,7 @@ body.ie ._ibg img {
   margin: 20px 0px 30px 50px;
 }
 
-._no-webp .form-footer__text::before{
+.no-webp .form-footer__text::before{
   background-image: url(../img/form/icon2.png); }
 
 .form-footer__text::before {
@@ -1617,7 +1617,7 @@ body.ie ._ibg img {
           align-items: center;
 }
 
-._no-webp .price__img{
+.no-webp .price__img{
   background-image: url(../img/price/price.png); }
 
 .price__img {
@@ -1651,72 +1651,6 @@ body.ie ._ibg img {
   background-color: #ffe400;
 }
 
-@-webkit-keyframes wipe-enter {
-  0% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    opacity: 1;
-  }
-}
-
-@keyframes wipe-enter {
-  0% {
-    -webkit-transform: rotateY(180deg);
-            transform: rotateY(180deg);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: rotateY(0deg);
-            transform: rotateY(0deg);
-    opacity: 1;
-  }
-}
-
-.square-animation {
-  -webkit-animation: wipe-enter 2s 1;
-          animation: wipe-enter 2s 1;
-}
-
-@-webkit-keyframes visible-enter {
-  0% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes visible-enter {
-  0% {
-    -webkit-transform: translateY(100px);
-            transform: translateY(100px);
-    opacity: 0;
-  }
-
-  100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-    opacity: 1;
-  }
-}
-
-.visible-animation {
-  -webkit-animation: visible-enter 2s 1;
-          animation: visible-enter 2s 1;
-}
-
 .page {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -1746,6 +1680,11 @@ body.ie ._ibg img {
 }
 
 .feedback-form__img img {
+  width: 615px;
+  height: 450px;
+}
+
+.feedback-form__img {
   width: 615px;
   height: 450px;
 }
@@ -1829,7 +1768,7 @@ body.ie ._ibg img {
   margin: 0px 50px 0px 45px;
 }
 
-._no-webp .feedback-form__item-text::before{
+.no-webp .feedback-form__item-text::before{
   background-image: url(../img/form/icon2.png); }
 
 .feedback-form__item-text::before {
@@ -1999,19 +1938,19 @@ body.ie ._ibg img {
   line-height: 20px;
 }
 
-._no-webp .img-spt{
+.no-webp .img-spt{
   background-image: url(../img/servise/service-1.jpg); }
 
-._no-webp .img-sks{
+.no-webp .img-sks{
   background-image: url(../img/servise/service-2.jpg); }
 
-._no-webp .img-domofon{
+.no-webp .img-domofon{
   background-image: url(../img/servise/service-3.jpg); }
 
-._no-webp .img-video{
+.no-webp .img-video{
   background-image: url(../img/servise/service-4.jpg); }
 
-._no-webp .img-hlagbaum{
+.no-webp .img-hlagbaum{
   background-image: url(../img/servise/service-5.jpg); }
 
 .warranty__wrapp {
@@ -2250,7 +2189,7 @@ body.ie ._ibg img {
   text-align: left;
 }
 
-._no-webp .step__img{
+.no-webp .step__img{
   background-image: url(../img/steps/man.png); }
 
 .step__img {
@@ -2300,7 +2239,7 @@ body.ie ._ibg img {
           transform: rotate(-5deg);
 }
 
-._no-webp .arrow::after{
+.no-webp .arrow::after{
   background-image: url(../img/steps/arrow.png); }
 
 .arrow::after {
@@ -2314,7 +2253,7 @@ body.ie ._ibg img {
   background-size: cover;
 }
 
-._no-webp .arrow::before{
+.no-webp .arrow::before{
   background-image: url(../img/steps/datch.png); }
 
 .arrow::before {
@@ -2324,6 +2263,36 @@ body.ie ._ibg img {
   top: 110px;
   left: 100px;
   position: absolute;
+}
+
+.rotate {
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.element-animation {
+  opacity: 0;
+  -webkit-transform: translateY(50px);
+      -ms-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.element-animation.element-show {
+  opacity: 1;
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateY(0px);
+      -ms-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.rotate.rotate-show {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
 }
 
 @media (min-width: 991.98px) {
@@ -2380,6 +2349,10 @@ body.ie ._ibg img {
   }
 
   .feedback-form__img img {
+    display: none;
+  }
+
+  .feedback-form__img {
     display: none;
   }
 
@@ -3040,24 +3013,24 @@ body.ie ._ibg img {
   }
 }
 
-._webp .form-footer__text::before{ background-image: url(../img/form/icon2.webp); }
+.webp .form-footer__text::before{ background-image: url(../img/form/icon2.webp); }
 
-._webp .price__img{ background-image: url(../img/price/price.webp); }
+.webp .price__img{ background-image: url(../img/price/price.webp); }
 
-._webp .feedback-form__item-text::before{ background-image: url(../img/form/icon2.webp); }
+.webp .feedback-form__item-text::before{ background-image: url(../img/form/icon2.webp); }
 
-._webp .img-spt{ background-image: url(../img/servise/service-1.webp); }
+.webp .img-spt{ background-image: url(../img/servise/service-1.webp); }
 
-._webp .img-sks{ background-image: url(../img/servise/service-2.webp); }
+.webp .img-sks{ background-image: url(../img/servise/service-2.webp); }
 
-._webp .img-domofon{ background-image: url(../img/servise/service-3.webp); }
+.webp .img-domofon{ background-image: url(../img/servise/service-3.webp); }
 
-._webp .img-video{ background-image: url(../img/servise/service-4.webp); }
+.webp .img-video{ background-image: url(../img/servise/service-4.webp); }
 
-._webp .img-hlagbaum{ background-image: url(../img/servise/service-5.webp); }
+.webp .img-hlagbaum{ background-image: url(../img/servise/service-5.webp); }
 
-._webp .step__img{ background-image: url(../img/steps/man.webp); }
+.webp .step__img{ background-image: url(../img/steps/man.webp); }
 
-._webp .arrow::after{ background-image: url(../img/steps/arrow.webp); }
+.webp .arrow::after{ background-image: url(../img/steps/arrow.webp); }
 
-._webp .arrow::before{ background-image: url(../img/steps/datch.webp); }
+.webp .arrow::before{ background-image: url(../img/steps/datch.webp); }
